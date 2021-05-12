@@ -2,12 +2,13 @@
 # define STRUCTURE_H
 
 // Change this function type
-typedef int (*func)(void);
+typedef int					(*t_func)(void);
+
 typedef struct s_unit_test	t_unit_test;
 struct s_unit_test
 {
 	char				*title;
-	int					(*func)(void);
+	t_func				func;
 	struct s_unit_test	*next;
 };
 

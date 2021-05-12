@@ -1,7 +1,7 @@
 #include "../include/utils.h"
 #include "../include/structure.h"
 
-void load_test(t_unit_test **link, char **name, func *f)
+void load_test(t_unit_test **link, char **name, t_func *f)
 {
     t_unit_test *new;
     int32_t sz;

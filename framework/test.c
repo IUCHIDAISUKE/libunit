@@ -1,24 +1,24 @@
 #include "./include/libunit.h"
 
-int add(void)
+int	add(void)
 {
 	printf("ADD\n");
 	return (0);
 }
 
-int sub(void)
+int	sub(void)
 {
 	printf("SUB\n");
 	return (0);
 }
 
-int main()
+int	main()
 {
 	t_unit_test *list;
-	func *cal;
+	t_func *cal;
 	char **name;
 
-	cal = (func[]){add, sub, add, NULL};
+	cal = (t_func[]){add, sub, add, NULL};
 	name = (char *[]){"12", "34", "56", NULL};
 
 	load_test(&list, name, cal);

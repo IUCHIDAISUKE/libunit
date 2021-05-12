@@ -1,4 +1,4 @@
-# include "../../include/utils.h"
+#include "../../include/utils.h"
 
 // Get list size
 int32_t	ft_linksize(t_unit_test *lst)
@@ -19,7 +19,7 @@ t_unit_test	*ft_linklast(t_unit_test *lst)
 }
 
 // Make new linklist
-t_unit_test *ft_linknew(char *name, func data)
+t_unit_test	*ft_linknew(char *name, t_func data)
 {
 	t_unit_test	*test;
 
@@ -42,23 +42,16 @@ void	ft_linkadd_back(t_unit_test **lst, t_unit_test *new)
 	{
 		*lst = new;
 		(*lst)->next = NULL;
-		return;
+		return ;
 	}
 	tmp = *lst;
-	int i = 0;
 	while (tmp->next)
-	{
-		i++;
 		tmp = tmp->next;
-	}
-	// *lst=
 	tmp->next = new;
-
 }
 
-
 // Add the new content of data, name to the last of lst
-bool	ft_linkadd_back_new(t_unit_test **linked, char *name, func data)
+bool	ft_linkadd_back_new(t_unit_test **linked, char *name, t_func data)
 {
 	t_unit_test	*link;
 

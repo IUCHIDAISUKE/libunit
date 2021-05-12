@@ -12,6 +12,6 @@
 # include <sys/wait.h>
 # include <signal.h>
 
-void load_test(t_unit_test **list, char **name, func *f);
+void	load_test(t_unit_test **list, char **name, t_func *f);
 
 #endif
