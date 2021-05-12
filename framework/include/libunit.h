@@ -1,12 +1,17 @@
 #ifndef LIBUNIT_H
-#define LIBUNIT_H
+# define LIBUNIT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <sys/wait.h>
-#include <signal.h>
+# include "../../lib/libft/libft.h"
+# include "./utils.h"
+# include "./structure.h"
+# include "./color.h"
 
-void load_test(t_unit_test **list, char *name, int (*func)(void));
+# include <stdio.h>
+# include <stdlib.h>
+# include <stdint.h>
+# include <sys/wait.h>
+# include <signal.h>
 
-#endif /* LIBUNIT_H */
+void	load_test(t_unit_test **list, char **name, t_func *f);
+
+#endif
