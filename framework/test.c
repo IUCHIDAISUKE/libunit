@@ -20,10 +20,10 @@ int	main()
 
 	cal = (t_func[]){add, sub, add, NULL};
 	name = (char *[]){"12", "34", "56", NULL};
+	list = NULL;
 
 	load_test(&list, name, cal);
-
-	while(list)
+	while (list)
 	{
 		printf("list title = %s\n", list->title);
 		list->func();

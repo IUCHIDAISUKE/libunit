@@ -37,8 +37,8 @@ void	ft_linkadd_back(t_unit_test **lst, t_unit_test *new)
 	t_unit_test	*tmp;
 
 	if (!lst && !new)
-		return;
-	if (!((*lst)->func)) //ここなんでこうしないといけないのか謎い！　!(*lst)で判断できないのか？
+		return ;
+	if (!(*lst))
 	{
 		*lst = new;
 		(*lst)->next = NULL;

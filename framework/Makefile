@@ -1,6 +1,6 @@
 NAME	= libunit.a
 
-CC		= clang
+CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror -I.
 RM		= rm -f
 AR 		= ar rcs
@@ -16,9 +16,6 @@ UTILS_SRCS =	freelink.c \
 SRCS = load_test.c $(UTILS_SRCS)
 OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
 OBJ_DIR = ./obj
-ifeq ($(strip $(OBJ_DIR)), "")
-  OBJ_DIR  = .
-endif
 
 .PHONY: all clean fclean re bonus trash
 
@@ -31,7 +28,7 @@ $(NAME): $(OBJS)
 $(OBJ_DIR)/%.o: %.c
 	@echo "COMPILING: $@"
 	@-mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(LINUXFLAGS) -c -o $@ $<
+	@$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	@$(RM) $(OBJS)
