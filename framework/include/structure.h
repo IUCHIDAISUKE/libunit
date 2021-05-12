@@ -1,11 +1,14 @@
 #ifndef STRUCTURE_H
-#define STRUCTURE_H
+# define STRUCTURE_H
 
-typedef struct s_unit_test
+// Change this function type
+typedef int (*func)(void);
+typedef struct s_unit_test	t_unit_test;
+struct s_unit_test
 {
-	struct s_unit_test *next;
-	char *title;
-	int (*func)(void);
-} t_unit_test;
+	char				*title;
+	int					(*func)(void);
+	struct s_unit_test	*next;
+};
 
-#endif /* STRUCTURE_H */
+#endif
