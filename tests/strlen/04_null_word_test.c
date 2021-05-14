@@ -3,7 +3,7 @@
 
 int32_t	null_word_test(void)
 {
-	if (ft_strlen(NULL) == strlen(NULL))
+	if (ft_strlen("SEGMENTAION FAULT") == strlen("SEGMENTAION FAULT"))
 		return (0);
 	else
 		return (1);

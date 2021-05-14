@@ -35,7 +35,7 @@ OBJ_DIR = ../obj
 
 all: $(NAME)
 
-test: $(NAME)
+test: re
 	@echo "run test"
 	@./runtest
 

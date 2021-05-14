@@ -27,6 +27,8 @@ static int32_t	exec_and_print_result(t_unit_test *tmp, int32_t index, int fd)
 	end_status = exec_test(tmp->func);
 	print_status_with_color(end_status, STDOUT_FILENO);
 	print_status(end_status, fd);
+	if (end_status != 0)
+		print_report(index, fd);
 	return (end_status);
 }
 

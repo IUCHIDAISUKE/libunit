@@ -11,6 +11,7 @@ UTILS_SRCS =	freelink.c \
 				ft_abs.c \
 				ft_malloc.c \
 				linkedlist.c \
+				print_report.c \
 				print_score.c \
 				print_status.c \
 				print_title.c \
