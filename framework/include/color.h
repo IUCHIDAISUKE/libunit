@@ -6,5 +6,6 @@
 # define _GREEN "\033[32m"
 # define _YELLOW "\033[33m"
 # define _BLUE "\033[34m"
+# define _NORMAL "\033[0m"
 
 #endif

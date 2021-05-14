@@ -3,7 +3,7 @@ NAME	= libunit.a
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror -I.
 RM		= rm -f
-AR 		= ar rcs
+AR		= ar rcs
 VPATH	=	./src/utils \
 			./src
 
@@ -15,6 +15,7 @@ UTILS_SRCS =	freelink.c \
 				print_score.c \
 				print_status.c \
 				print_title.c \
+				putnbr.c \
 				putstr.c
 
 SRCS =	launch_tests.c \
