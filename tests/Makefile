@@ -4,9 +4,17 @@ CFLAGS = -Werror -Wall -Wextra
 
 FRAMEWORK_PATH = ../framework
 
-HEADER_FILES = strlen/strlen.h
-SRCS = $(shell find . -name '*.c')
-OBJS = $(SRCS:.c=.o)
+VPATH	=	./strlen
+
+
+# HEADER_FILES = strlen/strlen.h
+# SRCS = $(shell find . -name '*.c')
+SRCS =	main.c	\
+		00_launcher.c \
+		01_basic_test.c \
+		02_null_test.c
+OBJS = $(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
+OBJ_DIR = ./obj
 
 all: $(NAME)
 
@@ -15,20 +23,26 @@ test: $(NAME)
 	@./tests
 
 $(NAME): ${HEADER_FILES} ${OBJS}
-	@echo "MAKE libunit.a: $@"
+	@echo "\nMAKE libunit.a: $@"
 	@$(MAKE) -C $(FRAMEWORK_PATH)
 	@echo "COMPILING: $@"
 	@${CC} ${CFLAGS} -o ${NAME} ${OBJS} -L ${FRAMEWORK_PATH} -lunit
 
+
+$(OBJ_DIR)/%.o: %.c
+	@echo "COMPILING: $@"
+	@-mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c -o $@ $<
+
 clean:
 	@$(MAKE) -C $(FRAMEWORK_PATH) clean
-	@${RM} ${OBJS}
 	@echo "REMOVE OBJECT FILE"
+	@${RM} ${OBJS}
 
 fclean: clean
 	@$(MAKE) -C $(FRAMEWORK_PATH) fclean
-	@${RM} ${NAME}
 	@echo "REMOVE $(NAME)"
+	@${RM} ${NAME}
 
 re: fclean all
 
