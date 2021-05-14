@@ -39,9 +39,9 @@ int	launch_tests(t_unit_test **test_list)
 	score = 0;
 	while (tmp)
 	{
+		tests_num++;
 		if (exec_and_print_result(tmp, tests_num) == 0)
 			score++;
-		tests_num++;
 		tmp = tmp->next;
 	}
 	print_score(score, tests_num, STDOUT_FILENO);

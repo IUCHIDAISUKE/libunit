@@ -1,6 +1,6 @@
 NAME = tests
 CC = gcc
-CFLAGS = -Werror -Wall -Wextra -g
+CFLAGS = -Werror -Wall -Wextra
 
 FRAMEWORK_PATH = ../framework
 

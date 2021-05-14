@@ -30,10 +30,12 @@ void		print_status(int32_t end_status, int fd);
 
 void		print_test_title(char *title, int32_t index, int fd);
 
+void		ft_putnbr_fd(int32_t n, int fd);
+void		ft_putnbr_fd_with_color(int32_t n, char *color, int fd);
+
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl(char *s, int fd);
 void		ft_putendl_with_color(char *s, char *color, int fd);
 int32_t		ft_putstrerr(char *s);
-void		ft_putnbr_fd(int32_t n, int fd);
 
 #endif

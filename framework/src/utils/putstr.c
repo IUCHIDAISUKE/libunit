@@ -1,4 +1,5 @@
 #include "../../include/utils.h"
+#include "../../include/color.h"
 
 // Write s in fd stream
 void	ft_putstr_fd(char *s, int fd)
@@ -18,6 +19,7 @@ void	ft_putendl_with_color(char *s, char *color, int fd)
 {
 	ft_putstr_fd(color, fd);
 	ft_putendl(s, fd);
+	ft_putstr_fd(_NORMAL, fd);
 }
 
 // Write s in error stream
@@ -27,14 +29,4 @@ int32_t	ft_putstrerr(char *s)
 		exit(EXIT_FAILURE);
 	write(STDERR_FILENO, s, ft_strlen(s));
 	exit(EXIT_FAILURE);
-}
-
-// Write number in fd stream
-void	ft_putnbr_fd(int32_t n, int fd)
-{
-	if (n / 10)
-		ft_putnbr_fd(n / 10, fd);
-	else
-		write(fd, "-", n < 0);
-	write(fd, &"0123456789"[ft_abs(n % 10)], 1);
 }
