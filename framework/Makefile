@@ -8,12 +8,19 @@ VPATH	=	./src/utils \
 			./src
 
 UTILS_SRCS =	freelink.c \
+				ft_abs.c \
 				ft_malloc.c \
 				ft_strlen.c \
 				linkedlist.c \
+				print_score.c \
+				print_status.c \
+				print_title.c \
 				putstr.c
 
-SRCS = load_test.c $(UTILS_SRCS)
+SRCS =	launch_tests.c \
+		load_test.c
+
+SRCS += $(UTILS_SRCS)
 OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
 OBJ_DIR = ./obj
 
@@ -38,6 +45,5 @@ fclean:	clean
 	@$(RM) $(NAME)
 	@echo "REMOVE $(NAME)"
 	@echo
-
 
 re:	fclean all

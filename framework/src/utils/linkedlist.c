@@ -36,8 +36,6 @@ void	ft_linkadd_back(t_unit_test **lst, t_unit_test *new)
 {
 	t_unit_test	*tmp;
 
-	if (!lst && !new)
-		return ;
 	if (!(*lst))
 	{
 		*lst = new;
@@ -56,7 +54,7 @@ bool	ft_linkadd_back_new(t_unit_test **linked, char *name, t_func data)
 	t_unit_test	*link;
 
 	link = ft_linknew(name, data);
-	if (!link)
+	if (!link || !linked)
 		return (false);
 	ft_linkadd_back(linked, link);
 	return (true);

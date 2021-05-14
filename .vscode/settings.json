@@ -1,6 +1,10 @@
 {
 	"files.associations": {
 		"stdio.h": "c",
-		"libunit.h": "c"
+		"libunit.h": "c",
+		"structure.h": "c",
+		"signal.h": "c",
+		"strlen.h": "c",
+		"string.h": "c"
 	}
 }

@@ -1,25 +1,27 @@
 #include "../../include/utils.h"
 
 // Write s in fd stream
-ssize_t	ft_putstr(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-		return (0);
-	return (write(fd, s, ft_strlen(s)));
+	write(fd, s, ft_strlen(s));
 }
 
 // Write s in fd stream with new line
-ssize_t	ft_putendl(char *s, int fd)
+void	ft_putendl(char *s, int fd)
 {
-	ssize_t	res;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
+}
 
-	res = ft_putstr(s, fd);
-	res += write(fd, "\n", 1);
-	return (res);
+// Write s in fd stream with new line in color
+void	ft_putendl_with_color(char *s, char *color, int fd)
+{
+	ft_putstr_fd(color, fd);
+	ft_putendl(s, fd);
 }
 
 // Write s in error stream
-ssize_t	ft_putstrerr(char *s)
+int32_t	ft_putstrerr(char *s)
 {
 	if (!s)
 		exit(EXIT_FAILURE);
@@ -27,10 +29,12 @@ ssize_t	ft_putstrerr(char *s)
 	exit(EXIT_FAILURE);
 }
 
-// Write s in output stream
-ssize_t	ft_putstrout(char *s)
+// Write number in fd stream
+void	ft_putnbr_fd(int32_t n, int fd)
 {
-	if (!s)
-		return (0);
-	return (write(STDOUT_FILENO, s, ft_strlen(s)));
+	if (n / 10)
+		ft_putnbr_fd(n / 10, fd);
+	else
+		write(fd, "-", n < 0);
+	write(fd, &"0123456789"[ft_abs(n % 10)], 1);
 }

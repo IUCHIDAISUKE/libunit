@@ -1,5 +1,5 @@
 #include <string.h>
-#include "../../../lib/libft/libft.h"
+#include "../../lib/libft/libft.h"
 
 int basic_test(void)
 {
