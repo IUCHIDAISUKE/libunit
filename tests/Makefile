@@ -1,4 +1,4 @@
-NAME = tests
+NAME = runtest
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra
 
