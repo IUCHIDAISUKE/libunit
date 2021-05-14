@@ -5,6 +5,7 @@
 		"structure.h": "c",
 		"signal.h": "c",
 		"strlen.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"utils.h": "c"
 	}
 }
