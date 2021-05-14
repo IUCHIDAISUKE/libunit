@@ -10,6 +10,10 @@ void	print_status_with_color(int32_t end_status, int fd)
 		ft_putendl_with_color("[SEGV]", _YELLOW, fd);
 	else if (end_status == SIGBUS)
 		ft_putendl_with_color("[BUS ERROR]", _YELLOW, fd);
+	else if (end_status == SIGABRT)
+		ft_putendl_with_color("[ABRT]", _YELLOW, fd);
+	else if (end_status == SIGILL)
+		ft_putendl_with_color("[ILLIGAL]", _YELLOW, fd);
 	else if (end_status == TESRA)
 		ft_putendl_with_color("[THE ONE]", _BLUE, fd);
 	else
@@ -26,6 +30,10 @@ void	print_status(int32_t end_status, int fd)
 		ft_putendl("[SEGV]", fd);
 	else if (end_status == SIGBUS)
 		ft_putendl("[BUS ERROR]", fd);
+	else if (end_status == SIGABRT)
+		ft_putendl("[ABRT]", fd);
+	else if (end_status == SIGILL)
+		ft_putendl("[ILLIGAL]", fd);
 	else if (end_status == TESRA)
 		ft_putendl("[THE ONE]", fd);
 	else

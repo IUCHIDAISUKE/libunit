@@ -14,9 +14,6 @@ int32_t		ft_abs(int32_t n);
 
 bool		ft_malloc(void **str, size_t sz, size_t len);
 
-size_t		ft_strlen(const char *s);
-
-
 int32_t		ft_linksize(t_unit_test *lst);
 t_unit_test	*ft_linklast(t_unit_test *lst);
 t_unit_test	*ft_linknew(char *name, t_func data);
