@@ -23,8 +23,8 @@ t_unit_test	*ft_linknew(char *name, t_func data);
 void		ft_linkadd_back(t_unit_test **lst, t_unit_test *new);
 bool		ft_linkadd_back_new(t_unit_test **linked, char *name, t_func data);
 
-void		print_score(int32_t your_score, int32_t full_score, int fd);
-void		print_score_color(int32_t your_score, int32_t full_score, int fd);
+void		print_score(int32_t score, int32_t full_score, int fd);
+void		print_score_with_color(int32_t score, int32_t full_score, int fd);
 
 void		print_status_with_color(int32_t end_status, int fd);
 void		print_status(int32_t end_status, int fd);

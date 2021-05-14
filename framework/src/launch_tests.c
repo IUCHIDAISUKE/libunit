@@ -51,8 +51,9 @@ int	launch_tests(t_unit_test **test_list)
 			score++;
 		tmp = tmp->next;
 	}
-	print_score(score, tests_num, STDOUT_FILENO);
-
+	print_score_with_color(score, tests_num, STDOUT_FILENO);
+	print_score(score, tests_num, fd);
+	close(fd);
 	free_link(*test_list);
 	if (score == tests_num)
 		return (0);
