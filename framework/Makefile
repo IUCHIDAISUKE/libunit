@@ -10,8 +10,8 @@ VPATH	=	./src/utils \
 UTILS_SRCS =	freelink.c \
 				ft_abs.c \
 				ft_malloc.c \
-				ft_strlen.c \
 				linkedlist.c \
+				print_report.c \
 				print_score.c \
 				print_status.c \
 				print_title.c \
@@ -23,7 +23,7 @@ SRCS =	launch_tests.c \
 
 SRCS += $(UTILS_SRCS)
 OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
-OBJ_DIR = ./obj
+OBJ_DIR = ../obj
 
 .PHONY: all clean fclean re bonus trash
 

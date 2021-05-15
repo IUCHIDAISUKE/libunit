@@ -11,7 +11,7 @@ void	print_score(int32_t your_score, int32_t full_score, int fd)
 
 void	print_score_with_color(int32_t your_score, int32_t full_score, int fd)
 {
-	char *color;
+	char	*color;
 
 	color = NULL;
 	if (your_score == full_score)

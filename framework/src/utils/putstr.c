@@ -1,6 +1,18 @@
 #include "../../include/utils.h"
 #include "../../include/color.h"
 
+static size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	if (!s)
+		return (0);
+	len = 0;
+	while (*s++)
+		len++;
+	return (len);
+}
+
 // Write s in fd stream
 void	ft_putstr_fd(char *s, int fd)
 {

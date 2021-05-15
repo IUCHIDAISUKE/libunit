@@ -1,3 +1,22 @@
+STRLEN:
      1 BASIC_TEST : [OK]
      2 NULL_TEST : [OK]
-2/2 tests passed
+     3 NULL_CHAR_TEST : [OK]
+     4 NULL_WORD_TEST : [SEGV]
+          ## Check the strlen/04_null_word_test.c
+     5 ABORT_TEST : [ABRT]
+          ## Check the strlen/05_abort_test.c
+     6 BUSS_TEST : [BUS ERROR]
+          ## Check the strlen/06_buse_test.c
+     7 SEGV_TEST : [SEGV]
+          ## Check the strlen/07_segv_test.c
+     8 ILLIGAL_TEST : [ILLIGAL]
+          ## Check the strlen/08_illigal_test.c
+     9 BIGGER_TEST : [OK]
+     10 NONPRINTABLE_TEST : [OK]
+     11 DELL_TEST : [OK]
+     12 NUM_TEST : [OK]
+     13 HELLO42_TEST : [OK]
+     14 HOUAREYOU_TEST : [OK]
+     15 THANKYOU_TEST : [OK]
+10/15 tests passed
