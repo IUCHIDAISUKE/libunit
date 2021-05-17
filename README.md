@@ -1,3 +1,3 @@
 # libunit
 
-![](https://github.com/IUCHIDAISUKE/libunit.git/workflows/NormCI/badge.svg)
+![NormCI](https://github.com/IUCHIDAISUKE/libunit.git/workflows/NormCI/badge.svg)
