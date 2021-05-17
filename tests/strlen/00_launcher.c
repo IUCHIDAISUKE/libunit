@@ -1,13 +1,13 @@
 #include "strlen.h"
 
-int32_t	strlen_launcher(int fd)
+int32_t strlen_launcher(int fd)
 {
-	t_unit_test	*testlist;
+	t_unit_test *testlist;
 
 	testlist = NULL;
 	ft_putstr_fd("STRLEN:\n", STDOUT_FILENO);
 	ft_putstr_fd("STRLEN:\n", fd);
-	load_test(&testlist, "BASIC_TEST", basic_test);
+	load_test(NULL, "BASIC_TEST", basic_test);
 	load_test(&testlist, "NULL_TEST", null_test);
 	load_test(&testlist, "NULL_CHAR_TEST", null_char_test);
 	load_test(&testlist, "NULL_WORD_TEST", null_word_test);
